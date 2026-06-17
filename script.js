@@ -30,6 +30,8 @@ const scenes =
 
 let currentScene = 0;
 
+let cinematicStarted = false;
+
 document
     .getElementById("openBtn")
     .addEventListener("click", startStory);
@@ -43,14 +45,22 @@ function startStory() {
     document
         .getElementById("cinematic")
         .style.display = "flex";
+
+    cinematicStarted = true;
 }
 
-document.addEventListener("click", function() {
+document.addEventListener("click", function(event) {
+
+    if (!cinematicStarted)
+        return;
+
+    if (event.target.id === "openBtn")
+        return;
 
     const cinematic =
         document.getElementById("cinematic");
 
-    if(cinematic.style.display !== "flex")
+    if (cinematic.style.display !== "flex")
         return;
 
     scenes[currentScene]
@@ -58,9 +68,15 @@ document.addEventListener("click", function() {
 
     currentScene++;
 
-    if(currentScene >= scenes.length)
+    if (currentScene >= scenes.length) {
+
         currentScene = scenes.length - 1;
+
+        scenes[currentScene]
+            .classList.add("active");
+
         return;
+    }
 
     scenes[currentScene]
         .classList.add("active");
