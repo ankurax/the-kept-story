@@ -60,6 +60,7 @@ document.addEventListener("click", function() {
 
     if(currentScene >= scenes.length)
         currentScene = scenes.length - 1;
+        return;
 
     scenes[currentScene]
         .classList.add("active");

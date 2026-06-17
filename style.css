@@ -243,3 +243,50 @@ body {
         transform: translateY(0);
     }
 }
+
+.prayer-scene {
+
+    color: #f3d37a;
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+
+    text-shadow:
+        0 0 15px rgba(212,175,55,0.4);
+}
+
+.reveal-scene h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(3rem, 8vw, 6rem);
+
+    margin-bottom: 40px;
+
+    color: #d4af37;
+}
+
+.reveal-scene p {
+
+    font-size: 1.3rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+}
+
+#beginBtn {
+
+    padding: 15px 50px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #d4af37;
+
+    color: black;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
