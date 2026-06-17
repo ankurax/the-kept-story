@@ -136,3 +136,38 @@
 
     cursor: pointer;
 }
+
+#cinematic {
+
+    display: none;
+
+    height: 100vh;
+
+    background: #050505;
+
+    color: white;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.scene {
+
+    display: none;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    line-height: 1.6;
+
+    max-width: 900px;
+}
+
+.scene.active {
+    display: block;
+}

@@ -24,3 +24,43 @@ function checkPassword() {
             "Incorrect password";
     }
 }
+
+const scenes =
+    document.querySelectorAll(".scene");
+
+let currentScene = 0;
+
+document
+    .getElementById("openBtn")
+    .addEventListener("click", startStory);
+
+function startStory() {
+
+    document
+        .getElementById("cover")
+        .style.display = "none";
+
+    document
+        .getElementById("cinematic")
+        .style.display = "flex";
+}
+
+document.addEventListener("click", function() {
+
+    const cinematic =
+        document.getElementById("cinematic");
+
+    if(cinematic.style.display !== "flex")
+        return;
+
+    scenes[currentScene]
+        .classList.remove("active");
+
+    currentScene++;
+
+    if(currentScene >= scenes.length)
+        currentScene = scenes.length - 1;
+
+    scenes[currentScene]
+        .classList.add("active");
+});
