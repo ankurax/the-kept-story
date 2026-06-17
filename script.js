@@ -4,7 +4,7 @@ function checkPassword() {
         document.getElementById("password-input").value;
 
     const correctPassword =
-        "mahadev071225";
+        "112233";
 
     if (password === correctPassword) {
 

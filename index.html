@@ -1,60 +1,91 @@
-<div id="password-screen">
-    <div class="password-container">
+<!DOCTYPE html>
+<html lang="en">
 
-        <h1>THE KEPT STORY</h1>
+<head>
 
-        <p>
-            This story is meant for someone special.
-        </p>
+    <meta charset="UTF-8">
 
-        <input
-            type="password"
-            id="password-input"
-            placeholder="Enter Password"
-        >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-        <button onclick="checkPassword()">
-            Enter
-        </button>
+    <title>The Kept Story</title>
 
-        <p id="error-message"></p>
+    <link rel="stylesheet"
+          href="style.css">
 
-    </div>
-</div>
+</head>
 
-<div id="main-content">
+<body>
 
-    <section id="cover">
+    <!-- PASSWORD SCREEN -->
 
-        <div class="cover-content">
+    <div id="password-screen">
 
-            <p class="small-text">
-                To the girl
+        <div class="password-container">
+
+            <h1>THE KEPT STORY</h1>
+
+            <p>
+                This story was written
+                for someone special.
             </p>
 
-            <h1>
-                who unknowingly changed
-                the direction of my life.
-            </h1>
+            <input
+                type="password"
+                id="password-input"
+                placeholder="Enter Password">
 
-            <p class="birthday">
-                Happy Birthday, Manisha.
-            </p>
-
-            <p class="gift-line">
-                I made something for us.
-            </p>
-
-            <button id="openBtn">
-                Open
+            <button onclick="checkPassword()">
+                Enter
             </button>
+
+            <p id="error-message"></p>
 
         </div>
 
-    </section>
+    </div>
 
-</div>
 
-<script src="script.js"></script>
+    <!-- MAIN CONTENT -->
+
+    <div id="main-content">
+
+        <section id="cover">
+
+            <div class="cover-content">
+
+                <p class="small-text">
+                    To the girl
+                </p>
+
+                <h1>
+                    who unknowingly changed
+                    the direction of my life.
+                </h1>
+
+                <p class="birthday">
+                    Happy Birthday, Manisha.
+                </p>
+
+                <p class="gift-line">
+                    I made something for us.
+                </p>
+
+                <button id="openBtn">
+                    Open
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- JAVASCRIPT FILE -->
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
