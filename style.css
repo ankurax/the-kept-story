@@ -194,7 +194,7 @@ body {
 
     display: none;
 
-    height: 100vh;
+    min-height: 100vh;
 
     background: #050505;
 
@@ -206,13 +206,19 @@ body {
     text-align: center;
 
     padding: 40px;
+
+    overflow: hidden;
 }
 
 .scene {
 
     display: none;
 
+    width: 100%;
+
     max-width: 900px;
+
+    margin: auto;
 
     padding: 20px;
 
@@ -220,11 +226,9 @@ body {
 
     font-family: "Playfair Display", serif;
 
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1.8rem, 5vw, 4rem);
 
-    line-height: 1.5;
-
-    animation: fadeIn 1.2s ease;
+    line-height: 1.6;
 }
 
 .scene.active {
