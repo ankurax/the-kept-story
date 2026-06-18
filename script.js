@@ -84,17 +84,6 @@ document.addEventListener("click", function(event) {
         .classList.add("active");
 });
 
-document.addEventListener("click", function(event) {
-
-    if (!cinematicStarted)
-        return;
-
-    if (event.target.id === "openBtn")
-        return;
-
-    nextScene();
-});
-
 document.addEventListener("keydown", function(e) {
 
     if (!cinematicStarted)
