@@ -36,6 +36,14 @@ document
     .getElementById("openBtn")
     .addEventListener("click", startStory);
 
+    document
+    .getElementById("nextBtn")
+    .addEventListener("click", nextScene);
+
+    document
+    .getElementById("prevBtn")
+    .addEventListener("click", previousScene);
+
 function startStory() {
 
     document
