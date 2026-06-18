@@ -51,39 +51,6 @@ function startStory() {
     updateCounter();
 }
 
-document.addEventListener("click", function(event) {
-
-    if (!cinematicStarted)
-        return;
-
-    if (event.target.id === "openBtn")
-        return;
-
-    const cinematic =
-        document.getElementById("cinematic");
-
-    if (cinematic.style.display !== "flex")
-        return;
-
-    scenes[currentScene]
-        .classList.remove("active");
-
-    currentScene++;
-
-    if (currentScene >= scenes.length) {
-
-        currentScene = scenes.length - 1;
-
-        scenes[currentScene]
-            .classList.add("active");
-
-        return;
-    }
-
-    scenes[currentScene]
-        .classList.add("active");
-});
-
 document.addEventListener("keydown", function(e) {
 
     if (!cinematicStarted)
@@ -167,3 +134,4 @@ function handleSwipe() {
         nextScene();
     }
 }
+
