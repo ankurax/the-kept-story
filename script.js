@@ -32,19 +32,30 @@ let currentScene = 0;
 
 let cinematicStarted = false;
 
-document
-    .getElementById("openBtn")
-    .addEventListener("click", startStory);
+document.addEventListener("DOMContentLoaded", () => {
 
     document
-    .getElementById("nextBtn")
-    .addEventListener("click", nextScene);
+        .getElementById("openBtn")
+        .addEventListener("click", startStory);
 
     document
-    .getElementById("prevBtn")
-    .addEventListener("click", previousScene);
+        .getElementById("nextBtn")
+        .addEventListener("click", nextScene);
+
+    document
+        .getElementById("prevBtn")
+        .addEventListener("click", previousScene);
+
+});
 
 function startStory() {
+
+    currentScene = 0;
+
+    scenes.forEach(scene =>
+        scene.classList.remove("active"));
+
+    scenes[0].classList.add("active");
 
     document
         .getElementById("cover")
