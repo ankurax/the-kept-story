@@ -684,3 +684,17 @@ body {
     line-height: 2;
 }
 
+.story-button small {
+
+    display: block;
+
+    opacity: 0.6;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
