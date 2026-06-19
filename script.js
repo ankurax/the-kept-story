@@ -154,3 +154,22 @@ function handleSwipe() {
     }
 }
 
+document
+    .getElementById("beginBtn")
+    .addEventListener("click", beginStory);
+
+function beginStory() {
+
+    document
+        .getElementById("cinematic")
+        .style.display = "none";
+
+    document
+        .getElementById("chapter1")
+        .style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
