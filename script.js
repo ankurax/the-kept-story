@@ -173,3 +173,25 @@ function beginStory() {
         behavior: "smooth"
     });
 }
+
+document
+    .getElementById("chapter2Btn")
+    .addEventListener("click", openChapter2);
+
+function openChapter2() {
+
+    document
+        .getElementById("chapter1")
+        .style.display = "none";
+
+    document
+        .getElementById("chapter2")
+        .style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+

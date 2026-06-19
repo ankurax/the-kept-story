@@ -552,3 +552,83 @@ body {
     margin-bottom: 15px;
 }
 
+.chapter-end {
+
+    text-align: center;
+
+    margin-top: 80px;
+}
+
+.story-button {
+
+    background: transparent;
+
+    color: #d4af37;
+
+    border: 1px solid rgba(212,175,55,0.35);
+
+    padding: 18px 40px;
+
+    border-radius: 999px;
+
+    font-size: 1rem;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+}
+
+.story-button:hover {
+
+    background: rgba(212,175,55,0.12);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(212,175,55,0.15);
+}
+
+#chapter2 {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 120px 20px;
+
+    background: #050505;
+
+    color: white;
+}
+
+.gold-quote {
+
+    margin-top: 30px;
+
+    color: #d4af37;
+
+    text-align: center;
+
+    font-style: italic;
+
+    letter-spacing: 1px;
+}
+
+.special-moment {
+
+    text-align: center;
+
+    padding: 120px 40px;
+}
+
+.special-moment h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(3rem, 8vw, 6rem);
+
+    color: #d4af37;
+}
+
