@@ -441,3 +441,80 @@ body {
 
     border-radius: 20px;
 }
+
+.conversation-card {
+
+    max-width: 800px;
+}
+
+.chat-box {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-bubble {
+
+    max-width: 75%;
+
+    padding: 15px 20px;
+
+    border-radius: 18px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+}
+
+.sent {
+
+    align-self: flex-start;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.received {
+
+    align-self: flex-end;
+
+    background: rgba(212,175,55,0.15);
+
+    border: 1px solid rgba(212,175,55,0.25);
+
+    color: #f5d77b;
+}
+
+.memory-text {
+
+    text-align: center;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,0.8);
+
+    margin-top: 20px;
+}
+
+.memory-date {
+
+    text-align: center;
+
+    color: #d4af37;
+
+    letter-spacing: 2px;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 25px;
+}
+
