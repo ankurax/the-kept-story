@@ -194,4 +194,22 @@ function openChapter2() {
     });
 }
 
+document
+    .getElementById("backToChapter1")
+    .addEventListener("click", openChapter1);
 
+function openChapter1() {
+
+    document
+        .getElementById("chapter2")
+        .style.display = "none";
+
+    document
+        .getElementById("chapter1")
+        .style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
