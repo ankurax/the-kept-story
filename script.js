@@ -213,3 +213,23 @@ function openChapter1() {
         behavior: "smooth"
     });
 }
+
+document
+    .getElementById("chapter3Btn")
+    .addEventListener("click", openChapter3);
+
+function openChapter3() {
+
+    document
+        .getElementById("chapter2")
+        .style.display = "none";
+
+    document
+        .getElementById("chapter3")
+        .style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}

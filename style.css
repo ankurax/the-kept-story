@@ -761,3 +761,17 @@ body {
 
     text-align: center;
 }
+
+#chapter3 {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 120px 20px;
+
+    background: #050505;
+
+    color: white;
+}
+
