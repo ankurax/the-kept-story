@@ -233,3 +233,25 @@ function openChapter3() {
         behavior: "smooth"
     });
 }
+
+document
+    .getElementById("backToChapter2")
+    .addEventListener("click", openChapter2);
+
+function openChapter2() {
+
+    document
+        .getElementById("chapter3")
+        .style.display = "none";
+
+    document
+        .getElementById("chapter2")
+        .style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
