@@ -330,6 +330,7 @@ document
     .getElementById("backToChapter3")
     .addEventListener("click", () =>
         showChapter("chapter3"));
+    
 
 /*
 Future:
