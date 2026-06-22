@@ -174,6 +174,7 @@ function beginStory() {
     });
 }
 
+/*
 document
     .getElementById("chapter2Btn")
     .addEventListener("click", openChapter2);
@@ -253,5 +254,94 @@ function openChapter2() {
         behavior: "smooth"
     });
 }
+*/
 
+/* ---------- CHAPTER NAVIGATION ---------- */
 
+function showChapter(chapterId) {
+
+    const chapters = [
+
+        "chapter1",
+        "chapter2",
+        "chapter3",
+        "chapter4"
+
+    ];
+
+    chapters.forEach(id => {
+
+        const chapter =
+            document.getElementById(id);
+
+        if (chapter) {
+
+            chapter.style.display = "none";
+        }
+    });
+
+    document
+        .getElementById(chapterId)
+        .style.display = "block";
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+}
+
+/* ---------- CHAPTER 1 ---------- */
+
+document
+    .getElementById("chapter2Btn")
+    .addEventListener("click", () =>
+        showChapter("chapter2"));
+
+/* ---------- CHAPTER 2 ---------- */
+
+document
+    .getElementById("backToChapter1")
+    .addEventListener("click", () =>
+        showChapter("chapter1"));
+
+document
+    .getElementById("chapter3Btn")
+    .addEventListener("click", () =>
+        showChapter("chapter3"));
+
+/* ---------- CHAPTER 3 ---------- */
+
+document
+    .getElementById("backToChapter2")
+    .addEventListener("click", () =>
+        showChapter("chapter2"));
+
+document
+    .getElementById("chapter4Btn")
+    .addEventListener("click", () =>
+        showChapter("chapter4"));
+
+/* ---------- CHAPTER 4 ---------- */
+
+document
+    .getElementById("backToChapter3")
+    .addEventListener("click", () =>
+        showChapter("chapter3"));
+
+/*
+Future:
+
+document
+    .getElementById("chapter5Btn")
+    .addEventListener("click", () =>
+        showChapter("chapter5"));
+
+document
+    .getElementById("backToChapter4")
+    .addEventListener("click", () =>
+        showChapter("chapter4"));
+
+*/
