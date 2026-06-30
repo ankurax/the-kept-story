@@ -869,11 +869,29 @@ body {
 
 .special-moment p{
 
-    white-space:pre-line;
-
-    line-height:2.2;
-
     letter-spacing:1px;
+
+}
+
+.poem-card p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.45rem;
+
+    font-style:italic;
+
+    font-weight:400;
+
+    line-height:1.8;
+
+    letter-spacing:.3px;
+
+    text-align:center;
+
+    max-width:520px;
+
+    margin:auto;
 
 }
 
