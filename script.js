@@ -331,18 +331,26 @@ document
     .addEventListener("click", () =>
         showChapter("chapter3"));
     
-
-/*
-Future:
-
 document
     .getElementById("chapter5Btn")
     .addEventListener("click", () =>
         showChapter("chapter5"));
+
+/* ---------- CHAPTER 5 ---------- */
 
 document
     .getElementById("backToChapter4")
     .addEventListener("click", () =>
         showChapter("chapter4"));
 
-*/
+document
+    .getElementById("chapter6Btn")
+    .addEventListener("click", () =>
+        showChapter("chapter6"));
+
+/* ---------- CHAPTER 6 ---------- */
+document
+    .getElementById("backToChapter5")
+    .addEventListener("click", () =>
+        showChapter("chapter5"));
+

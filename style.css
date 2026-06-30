@@ -794,3 +794,105 @@ body {
 
     display: none;
 }
+
+.story-finale{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:40px;
+
+    opacity:0;
+
+    animation:fadeFinale 3s ease forwards;
+
+}
+
+.story-finale p{
+
+    font-size:2.4rem;
+
+    line-height:1.8;
+
+    letter-spacing:2px;
+
+    color:#efe4c5;
+
+}
+
+@keyframes fadeFinale{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.chapter-ending{
+
+    text-align:center;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.special-moment{
+
+    font-size:1.1rem;
+
+    line-height:2;
+
+}
+
+.special-moment p{
+
+    white-space:pre-line;
+
+    line-height:2.2;
+
+    letter-spacing:1px;
+
+}
+
+.story-finale{
+
+    animation:
+
+        fadeFinale 3s ease forwards,
+
+        fadeOutFinale 3s ease 6s forwards;
+
+}
+
+@keyframes fadeOutFinale{
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
