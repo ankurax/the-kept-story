@@ -1301,7 +1301,6 @@ img {
 
 @media (max-width: 768px) {
 
-    #cover,
     #cinematic {
         padding: var(--space-8) var(--space-5);
     }
@@ -1371,6 +1370,31 @@ img {
 
     }
 
+}
+
+#cover .cover-content h1 {
+    color: #4B2E35;
+    text-shadow:
+        0 0.08rem 0.85rem rgba(255, 248, 238, 0.22),
+        0 0.18rem 0.9rem rgba(92, 48, 58, 0.16);
+}
+
+#cover .small-text {
+    color: #7A3F48;
+    text-shadow: 0 0.08rem 0.65rem rgba(255, 244, 222, 0.22);
+}
+
+#cover .birthday {
+    color: #6A3A46;
+    text-shadow: 0 0.08rem 0.7rem rgba(255, 244, 222, 0.22);
+}
+
+#cover .gift-line {
+    color: #5A4242;
+}
+
+#cover #openBtn {
+    color: #3B2422;
 }
 
 .reveal-scene {
