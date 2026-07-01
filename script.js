@@ -373,3 +373,34 @@ document
     .addEventListener("click", () =>
         showChapter("chapter5"));
 
+document
+
+.getElementById("keptMomentsBtn")
+
+.addEventListener(
+
+    "click",
+
+    openKeptMoments
+
+);
+
+function openKeptMoments(){
+
+    document
+
+    .getElementById("kept-moments")
+
+    .style.display="block";
+
+    document
+
+    .getElementById("kept-moments")
+
+    .scrollIntoView({
+
+        behavior:"smooth"
+
+    });
+
+}
