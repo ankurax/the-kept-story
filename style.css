@@ -1470,7 +1470,8 @@ img {
 }
 
 .story-glass-nav {
-    position: absolute;
+    position: relative;
+    margin: 1rem;
     top: clamp(0.9rem, 2vw, 1.35rem);
     left: clamp(0.9rem, 2vw, 1.35rem);
     right: clamp(0.9rem, 2vw, 1.35rem);
@@ -1486,6 +1487,7 @@ img {
     color: rgba(255, 248, 238, 0.92);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
     backdrop-filter: blur(18px);
+    width: calc(100% - 2rem);
 }
 
 .story-brand,
@@ -1520,7 +1522,7 @@ img {
     position: relative;
     z-index: 1;
     width: min(100%, 44rem);
-    margin-top: var(--space-12);
+    margin-top: 3rem;
     text-align: center;
 }
 

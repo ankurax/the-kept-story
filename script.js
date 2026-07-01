@@ -87,6 +87,22 @@ function updateCounter() {
     document.getElementById("sceneCounter")
         .textContent =
             `${currentScene + 1} / ${scenes.length}`;
+        
+     const nextBtn = document.getElementById("nextBtn");
+    const sceneCounter = document.getElementById("sceneCounter");
+
+    // Landing / Story Reveal page
+    if (currentScene === scenes.length - 1) {
+
+        nextBtn.style.display = "none";
+        sceneCounter.style.display = "none";
+
+    } else {
+
+        nextBtn.style.display = "";
+        sceneCounter.style.display = "";
+
+    }
 }
 
 function nextScene() {
@@ -120,6 +136,7 @@ function previousScene() {
 
     updateCounter();
 }
+
 
 let touchStartX = 0;
 let touchEndX = 0;
