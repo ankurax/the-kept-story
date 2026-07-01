@@ -1371,3 +1371,24 @@ img {
     }
 
 }
+
+#cover .cover-content h1 {
+    color: #FFF8EE;
+    text-shadow:
+        0 0.16rem 1rem rgba(105, 60, 74, 0.16),
+        0 0 1.7rem rgba(255, 238, 188, 0.2);
+}
+
+#cover .small-text,
+#cover .birthday {
+    color: #FFE7BF;
+    text-shadow: 0 0 0.9rem rgba(255, 231, 191, 0.3);
+}
+
+#cover .gift-line {
+    color: #F7EEE5;
+}
+
+#cover #openBtn {
+    color: #4A2C2A;
+}
