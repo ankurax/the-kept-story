@@ -353,11 +353,11 @@ img {
     line-height: 1.04;
 
     margin-top: var(--space-4);
-    color: #FFF8EE;
+    color: #4B2E35;
     letter-spacing: 0;
     text-shadow:
-        0 0.16rem 1rem rgba(105, 60, 74, 0.16),
-        0 0 1.7rem rgba(255, 238, 188, 0.2);
+        0 0.08rem 0.85rem rgba(255, 248, 238, 0.22),
+        0 0.18rem 0.9rem rgba(92, 48, 58, 0.16);
     text-wrap: balance;
 }
 
@@ -366,14 +366,14 @@ img {
     display: inline-flex;
     align-items: center;
     gap: var(--space-3);
-    color: #FFE7BF;
+    color: #7A3F48;
 
     letter-spacing: 2.8px;
 
     text-transform: uppercase;
     font-size: clamp(0.72rem, 2vw, 0.86rem);
     font-weight: 700;
-    text-shadow: 0 0 0.9rem rgba(255, 231, 191, 0.3);
+    text-shadow: 0 0.08rem 0.65rem rgba(255, 244, 222, 0.22);
 }
 
 .small-text::before,
@@ -396,12 +396,12 @@ img {
 
     margin-top: var(--space-6);
 
-    color: #FFE7BF;
+    color: #6A3A46;
 
     font-size: clamp(1.35rem, 4vw, 2rem);
     font-family: var(--font-display);
     font-style: italic;
-    text-shadow: 0 0 1rem rgba(255, 226, 180, 0.27);
+    text-shadow: 0 0.08rem 0.7rem rgba(255, 244, 222, 0.22);
 }
 
 .gift-line {
@@ -409,7 +409,7 @@ img {
     max-width: 34rem;
     margin: var(--space-5) auto 0;
 
-    color: #F7EEE5;
+    color: #5A4242;
     font-size: clamp(1rem, 2.6vw, 1.14rem);
     line-height: 1.85;
 }
@@ -428,7 +428,7 @@ img {
     background:
         linear-gradient(135deg, #fff8df 0%, #ffd19a 48%, #ef8f8d 100%);
 
-    color: #4A2C2A;
+    color: #3B2422;
 
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -1373,22 +1373,26 @@ img {
 }
 
 #cover .cover-content h1 {
-    color: #FFF8EE;
+    color: #4B2E35;
     text-shadow:
-        0 0.16rem 1rem rgba(105, 60, 74, 0.16),
-        0 0 1.7rem rgba(255, 238, 188, 0.2);
+        0 0.08rem 0.85rem rgba(255, 248, 238, 0.22),
+        0 0.18rem 0.9rem rgba(92, 48, 58, 0.16);
 }
 
-#cover .small-text,
+#cover .small-text {
+    color: #7A3F48;
+    text-shadow: 0 0.08rem 0.65rem rgba(255, 244, 222, 0.22);
+}
+
 #cover .birthday {
-    color: #FFE7BF;
-    text-shadow: 0 0 0.9rem rgba(255, 231, 191, 0.3);
+    color: #6A3A46;
+    text-shadow: 0 0.08rem 0.7rem rgba(255, 244, 222, 0.22);
 }
 
 #cover .gift-line {
-    color: #F7EEE5;
+    color: #5A4242;
 }
 
 #cover #openBtn {
-    color: #4A2C2A;
+    color: #3B2422;
 }
