@@ -233,85 +233,312 @@ img {
 
     text-align: center;
 
-    padding: var(--space-10) var(--space-6);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: var(--space-12) var(--space-6);
     background:
-        linear-gradient(180deg, rgba(255, 248, 236, 0.03), transparent 38%),
-        radial-gradient(circle at center bottom, rgba(159, 180, 156, 0.1), transparent 34rem);
+        radial-gradient(circle at 50% 18%, rgba(255, 237, 184, 0.45), transparent 16rem),
+        radial-gradient(circle at 18% 28%, rgba(255, 173, 158, 0.28), transparent 18rem),
+        radial-gradient(circle at 84% 20%, rgba(255, 201, 143, 0.25), transparent 19rem),
+        linear-gradient(180deg, #f7b785 0%, #f4a59b 34%, #d99ab0 62%, #81647c 100%);
+}
+
+#cover::before,
+#cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+#cover::before {
+    z-index: -2;
+    background:
+        radial-gradient(circle at 22% 20%, rgba(255, 255, 226, 0.85) 0 0.18rem, transparent 0.22rem),
+        radial-gradient(circle at 78% 32%, rgba(255, 250, 215, 0.72) 0 0.14rem, transparent 0.2rem),
+        radial-gradient(circle at 44% 16%, rgba(255, 248, 216, 0.6) 0 0.12rem, transparent 0.18rem),
+        radial-gradient(ellipse at 50% 108%, rgba(112, 105, 123, 0.5) 0 34%, transparent 34.5%),
+        radial-gradient(ellipse at 18% 110%, rgba(126, 137, 115, 0.52) 0 28%, transparent 28.5%),
+        radial-gradient(ellipse at 86% 112%, rgba(111, 127, 113, 0.48) 0 31%, transparent 31.5%),
+        linear-gradient(180deg, transparent 0 60%, rgba(65, 52, 68, 0.34) 100%);
+    animation: coverLights 8s ease-in-out infinite alternate;
+}
+
+#cover::after {
+    z-index: -1;
+    background:
+        radial-gradient(ellipse at 12% 76%, rgba(255, 219, 193, 0.95) 0 0.26rem, transparent 0.3rem),
+        radial-gradient(ellipse at 28% 30%, rgba(255, 205, 192, 0.9) 0 0.3rem, transparent 0.34rem),
+        radial-gradient(ellipse at 71% 25%, rgba(255, 232, 204, 0.92) 0 0.22rem, transparent 0.27rem),
+        radial-gradient(ellipse at 88% 66%, rgba(255, 196, 187, 0.88) 0 0.28rem, transparent 0.33rem),
+        radial-gradient(ellipse at 40% 82%, rgba(255, 226, 196, 0.78) 0 0.2rem, transparent 0.25rem),
+        radial-gradient(circle at 16% 50%, rgba(255, 248, 220, 0.52) 0 0.12rem, transparent 0.17rem),
+        radial-gradient(circle at 68% 76%, rgba(255, 248, 220, 0.48) 0 0.13rem, transparent 0.18rem),
+        radial-gradient(circle at 92% 42%, rgba(255, 248, 220, 0.5) 0 0.11rem, transparent 0.16rem);
+    background-size: 18rem 18rem, 22rem 22rem, 20rem 20rem, 24rem 24rem, 17rem 17rem, 15rem 15rem, 18rem 18rem, 20rem 20rem;
+    animation: coverPetals 18s linear infinite;
 }
 
 .cover-content {
 
+    position: relative;
+    z-index: 1;
+    width: min(100%, 850px);
     max-width: 850px;
+    padding: clamp(2rem, 6vw, 4.25rem);
+    border: 1px solid rgba(255, 248, 236, 0.35);
+    border-radius: clamp(1.75rem, 5vw, 3rem);
+    background:
+        linear-gradient(180deg, rgba(255, 249, 235, 0.26), rgba(255, 246, 232, 0.12)),
+        radial-gradient(circle at 50% 0%, rgba(255, 255, 226, 0.22), transparent 18rem);
+    box-shadow:
+        0 34px 90px rgba(93, 59, 73, 0.26),
+        inset 0 1px 0 rgba(255, 255, 255, 0.36);
+    backdrop-filter: blur(18px);
+}
+
+.cover-content::before,
+.cover-content::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+.cover-content::before {
+    width: clamp(5.5rem, 16vw, 9rem);
+    aspect-ratio: 1;
+    left: clamp(0.9rem, 3vw, 2.1rem);
+    bottom: clamp(0.9rem, 3vw, 2rem);
+    border-radius: 58% 42% 50% 50%;
+    background:
+        radial-gradient(circle at 49% 42%, #7d4e52 0 0.15rem, transparent 0.18rem),
+        radial-gradient(circle at 61% 42%, #7d4e52 0 0.15rem, transparent 0.18rem),
+        radial-gradient(ellipse at 55% 58%, rgba(196, 100, 111, 0.42) 0 0.42rem, transparent 0.46rem),
+        radial-gradient(ellipse at 50% 83%, #d7a06f 0 32%, transparent 33%),
+        linear-gradient(145deg, #fff1d7 0 52%, #ffd6c2 52% 100%);
+    box-shadow:
+        -1.5rem -1.15rem 0 -0.78rem rgba(255, 238, 207, 0.95),
+        1.35rem -1.08rem 0 -0.78rem rgba(255, 238, 207, 0.95),
+        0 1rem 2.2rem rgba(99, 62, 76, 0.18);
+    opacity: 0.92;
+    animation: coverFloat 6s ease-in-out infinite;
+}
+
+.cover-content::after {
+    width: clamp(4.25rem, 13vw, 7rem);
+    aspect-ratio: 1.15;
+    right: clamp(0.9rem, 3vw, 2.25rem);
+    top: clamp(0.9rem, 3vw, 2rem);
+    border-radius: 50% 50% 44% 44%;
+    background:
+        radial-gradient(circle at 41% 42%, #70484f 0 0.13rem, transparent 0.16rem),
+        radial-gradient(circle at 58% 42%, #70484f 0 0.13rem, transparent 0.16rem),
+        radial-gradient(ellipse at 50% 60%, rgba(195, 100, 112, 0.44) 0 0.34rem, transparent 0.38rem),
+        linear-gradient(160deg, #fff7df 0 56%, #f7b6a6 56% 100%);
+    box-shadow:
+        -1.05rem -0.85rem 0 -0.62rem #ffe9c6,
+        1.05rem -0.85rem 0 -0.62rem #ffe9c6,
+        0 0.85rem 2rem rgba(99, 62, 76, 0.16);
+    opacity: 0.74;
+    animation: coverFloat 7.5s ease-in-out 1s infinite;
 }
 
 .cover-content h1 {
 
     font-family: var(--font-display);
 
-    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-size: clamp(2.8rem, 8vw, 5.85rem);
 
-    line-height: 1.18;
+    line-height: 1.04;
 
     margin-top: var(--space-4);
-    color: var(--color-paper);
+    color: #4B2E35;
+    letter-spacing: 0;
+    text-shadow:
+        0 0.08rem 0.85rem rgba(255, 248, 238, 0.22),
+        0 0.18rem 0.9rem rgba(92, 48, 58, 0.16);
     text-wrap: balance;
 }
 
 .small-text {
 
-    color: var(--color-gold-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: #7A3F48;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.8px;
 
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: clamp(0.72rem, 2vw, 0.86rem);
     font-weight: 700;
+    text-shadow: 0 0.08rem 0.65rem rgba(255, 244, 222, 0.22);
+}
+
+.small-text::before,
+.small-text::after {
+    content: "";
+    width: 0.55rem;
+    aspect-ratio: 1;
+    border-radius: 50% 50% 50% 0;
+    background: #ffd2bf;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 1.1rem rgba(255, 224, 190, 0.68);
+    animation: coverHeart 4.8s ease-in-out infinite;
+}
+
+.small-text::after {
+    animation-delay: 1.8s;
 }
 
 .birthday {
 
-    margin-top: var(--space-8);
+    margin-top: var(--space-6);
 
-    color: var(--color-gold-soft);
+    color: #6A3A46;
 
-    font-size: 1.4rem;
+    font-size: clamp(1.35rem, 4vw, 2rem);
     font-family: var(--font-display);
+    font-style: italic;
+    text-shadow: 0 0.08rem 0.7rem rgba(255, 244, 222, 0.22);
 }
 
 .gift-line {
 
-    margin-top: var(--space-4);
+    max-width: 34rem;
+    margin: var(--space-5) auto 0;
 
-    color: var(--text-secondary);
+    color: #5A4242;
+    font-size: clamp(1rem, 2.6vw, 1.14rem);
+    line-height: 1.85;
 }
 
 #openBtn {
 
+    position: relative;
     margin-top: var(--space-10);
 
-    padding: 15px 45px;
+    padding: 16px 46px;
 
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.52);
 
     border-radius: var(--radius-pill);
 
-    background: linear-gradient(135deg, var(--color-paper), var(--color-gold-soft) 42%, var(--color-gold));
+    background:
+        linear-gradient(135deg, #fff8df 0%, #ffd19a 48%, #ef8f8d 100%);
 
-    color: var(--text-on-light);
+    color: #3B2422;
 
-    font-weight: 600;
+    font-weight: 800;
+    letter-spacing: 0.5px;
 
     cursor: pointer;
 
-    box-shadow: var(--shadow-glow);
+    box-shadow:
+        0 18px 42px rgba(151, 80, 94, 0.28),
+        0 0 32px rgba(255, 222, 170, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.78);
     transition: transform var(--transition-cinematic), box-shadow var(--transition-cinematic), filter var(--transition-soft);
 }
 
 #openBtn:hover {
 
-    transform: translateY(-3px);
-    filter: saturate(1.04);
-    box-shadow: 0 24px 56px rgba(216, 173, 85, 0.25);
+    transform: translateY(-4px) scale(1.015);
+    filter: saturate(1.06) brightness(1.02);
+    box-shadow:
+        0 24px 56px rgba(151, 80, 94, 0.34),
+        0 0 44px rgba(255, 224, 180, 0.44),
+        inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+@keyframes coverPetals {
+    from {
+        background-position:
+            0 0,
+            2rem -8rem,
+            -6rem -3rem,
+            4rem -10rem,
+            -2rem -6rem,
+            0 0,
+            5rem -2rem,
+            -4rem -1rem;
+    }
+
+    to {
+        background-position:
+            -4rem 18rem,
+            8rem 16rem,
+            3rem 19rem,
+            -5rem 17rem,
+            6rem 18rem,
+            1rem 9rem,
+            6rem 10rem,
+            -2rem 8rem;
+    }
+}
+
+@keyframes coverLights {
+    from {
+        opacity: 0.78;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-0.7rem);
+    }
+}
+
+@keyframes coverFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateY(-0.65rem) rotate(1.5deg);
+    }
+}
+
+@keyframes coverHeart {
+    0%,
+    100% {
+        opacity: 0.62;
+        transform: translateY(0) rotate(-45deg) scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-0.22rem) rotate(-45deg) scale(1.06);
+    }
+}
+
+@media (max-width: 768px) {
+
+    #cover {
+        min-height: 100svh;
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .cover-content {
+        padding: var(--space-10) var(--space-5);
+    }
+
+    .cover-content::before {
+        width: 4.9rem;
+        opacity: 0.58;
+    }
+
+    .cover-content::after {
+        width: 4rem;
+        opacity: 0.5;
+    }
+
+    #openBtn {
+        width: min(100%, 18rem);
+        padding-inline: var(--space-6);
+    }
 }
 
 #cinematic {
@@ -1074,7 +1301,6 @@ img {
 
 @media (max-width: 768px) {
 
-    #cover,
     #cinematic {
         padding: var(--space-8) var(--space-5);
     }
@@ -1144,4 +1370,29 @@ img {
 
     }
 
+}
+
+#cover .cover-content h1 {
+    color: #4B2E35;
+    text-shadow:
+        0 0.08rem 0.85rem rgba(255, 248, 238, 0.22),
+        0 0.18rem 0.9rem rgba(92, 48, 58, 0.16);
+}
+
+#cover .small-text {
+    color: #7A3F48;
+    text-shadow: 0 0.08rem 0.65rem rgba(255, 244, 222, 0.22);
+}
+
+#cover .birthday {
+    color: #6A3A46;
+    text-shadow: 0 0.08rem 0.7rem rgba(255, 244, 222, 0.22);
+}
+
+#cover .gift-line {
+    color: #5A4242;
+}
+
+#cover #openBtn {
+    color: #3B2422;
 }
